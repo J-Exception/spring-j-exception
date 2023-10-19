@@ -2,7 +2,9 @@
 
 > This project is an open source project and I am looking forward to your issues.
 
-Resolve over 1500 JException related runtime exceptions that exist in a spring framework.
+<br>
+
+**Resolve over 1500 JException related runtime exceptions that exist in a spring framework.**
 
 <br>
 
