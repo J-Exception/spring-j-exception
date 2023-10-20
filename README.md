@@ -27,11 +27,25 @@ In this way, you can create a JException using the JExceptionFactory.
 ```kt
 class Service {
     fun execute() {
-        val optionalCustomJException = jExceptionFactory.createJException(entity, status)
+        val customException = CustomExceptionFactory.createJException(entity, JErrorCode.NOT_FOUND_J)
+        val originJException404 = OriginExceptionFactory.createJException(null, JErrorCode.NOT_FOUND_J)
         
-        if(condition)
-            throw optionalCustomJException.get(1)
+        if(condition) {
+            throw customException
+        } else {
+            throw originException404
+        }
     }
+}
+
+@Configuration
+class JConfiguration {
+
+    @Bean
+    fun jExceptionFactory() = CustomJExceptionFactory()
+    
+    @Bean
+    fun jExceptionFactory() = originJExceptionFactory()
 }
 
 ```
@@ -45,6 +59,7 @@ class JConfiguration {
     
     @Bean
     fun jexceptionFilter() = JexceptionFilter()
+    
 }
 
 ```
