@@ -45,7 +45,7 @@ class JConfiguration {
     fun jExceptionFactory() = CustomJExceptionFactory()
     
     @Bean
-    fun jExceptionFactory() = originJExceptionFactory()
+    fun jExceptionFactory() = OriginJExceptionFactory()
 }
 
 ```
