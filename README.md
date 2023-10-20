@@ -6,7 +6,6 @@
 
 **Resolve over 1500 JException related runtime exceptions that exist in a spring framework.**
 
-<br>
 
 ## Description
 
@@ -18,8 +17,6 @@ The inconvenient task of inserting exception information into the **HttpServletR
 
 JException provides all exception classes for HTTP methods from 400 to 500. Additionally, **you can create a domain name by adding it to an associated exception to handle domain names and HTTP-related exceptions.**
 
-
-<br>
 
 ## Feature
 
@@ -52,5 +49,8 @@ class JConfiguration {
 
 ```
 
+### Diagram
+
+![](./assets/img/diagram.png)
 
 
